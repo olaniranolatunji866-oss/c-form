@@ -1,0 +1,503 @@
+/* =================================
+   RESET
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =================================
+   BODY
+================================= */
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background: linear-gradient(
+    to bottom,
+    #dff8f7 0%,
+    #dff8f7 42%,
+    #ffffff 42%,
+    #ffffff 100%
+  );
+}
+
+
+/* =================================
+   MAIN CONTAINER
+================================= */
+
+.contact-container {
+  width: 100%;
+  max-width: 1080px;
+
+  min-height: 470px;
+
+  display: grid;
+  grid-template-columns: 38% 62%;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =================================
+   LEFT SIDE
+================================= */
+
+.contact-info {
+  position: relative;
+
+  overflow: hidden;
+
+  background: #09b8b1;
+
+  color: white;
+
+  padding: 45px 40px;
+}
+
+
+/* Text content should stay
+   above the circle */
+
+.info-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Heading */
+
+.contact-info h2 {
+  font-size: 20px;
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+
+/* Description */
+
+.description {
+  max-width: 280px;
+
+  font-size: 12px;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =================================
+   CONTACT DETAILS
+================================= */
+
+.contact-details {
+  margin-top: 50px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 27px;
+}
+
+
+/* Individual contact item */
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+
+  font-size: 12px;
+}
+
+
+/* Contact icon */
+
+.icon {
+  width: 20px;
+
+  flex-shrink: 0;
+
+  font-size: 18px;
+
+  color: white;
+
+  text-align: center;
+}
+
+
+/* Contact text */
+
+.contact-item p {
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.95);
+}
+
+
+/* =================================
+   DECORATIVE CIRCLE
+================================= */
+
+.circle {
+  position: absolute;
+
+  width: 170px;
+  height: 170px;
+
+  right: -50px;
+  bottom: -85px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.08)
+  );
+}
+
+
+/* =================================
+   RIGHT SIDE FORM
+================================= */
+
+.contact-form {
+  padding: 55px 60px;
+
+  background: #ffffff;
+}
+
+
+/* Form */
+
+.contact-form form {
+  width: 100%;
+}
+
+
+/* =================================
+   TWO COLUMN ROW
+================================= */
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 45px;
+}
+
+
+/* =================================
+   FORM GROUP
+================================= */
+
+.form-group {
+  width: 100%;
+
+  margin-bottom: 28px;
+}
+
+
+/* Labels */
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  color: #777;
+}
+
+
+/* Inputs */
+
+.form-group input {
+  width: 100%;
+
+  border: none;
+
+  border-bottom: 1px solid #d8d8d8;
+
+  outline: none;
+
+  padding: 3px 0 10px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #333;
+
+  background: transparent;
+
+  transition: 0.3s;
+}
+
+
+/* Input focus */
+
+.form-group input:focus {
+  border-bottom-color: #09b8b1;
+}
+
+
+/* =================================
+   SUBJECT
+================================= */
+
+.subject {
+  max-width: 100%;
+}
+
+
+/* =================================
+   MESSAGE
+================================= */
+
+.message {
+  margin-top: 5px;
+}
+
+
+/* Textarea */
+
+.message textarea {
+  width: 100%;
+
+  height: 75px;
+
+  resize: none;
+
+  border: none;
+
+  border-bottom: 2px solid #70cfca;
+
+  outline: none;
+
+  padding: 5px 0;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  color: #333;
+
+  background: transparent;
+}
+
+
+/* Placeholder */
+
+.message textarea::placeholder {
+  color: #888;
+}
+
+
+/* =================================
+   BUTTON
+================================= */
+
+button {
+  margin-top: 8px;
+
+  padding: 12px 25px;
+
+  border: none;
+
+  border-radius: 4px;
+
+  background: #09b8b1;
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+
+/* Button hover */
+
+button:hover {
+  background: #078f8a;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 15px rgba(9, 184, 177, 0.25);
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 800px) {
+
+  body {
+    padding: 25px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+
+    max-width: 600px;
+  }
+
+  .contact-info {
+    min-height: 350px;
+
+    padding: 40px 35px;
+  }
+
+  .contact-form {
+    padding: 45px 35px;
+  }
+
+  .circle {
+    width: 180px;
+    height: 180px;
+
+    right: -60px;
+    bottom: -90px;
+  }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 500px) {
+
+  body {
+    padding: 15px;
+
+    align-items: flex-start;
+  }
+
+
+  .contact-container {
+    margin-top: 20px;
+
+    border-radius: 14px;
+  }
+
+
+  /* Contact information */
+
+  .contact-info {
+    padding: 35px 25px;
+
+    min-height: 330px;
+  }
+
+
+  .contact-info h2 {
+    font-size: 18px;
+  }
+
+
+  .description {
+    font-size: 11px;
+
+    max-width: 250px;
+  }
+
+
+  .contact-details {
+    margin-top: 35px;
+
+    gap: 22px;
+  }
+
+
+  /* Form */
+
+  .contact-form {
+    padding: 35px 25px;
+  }
+
+
+  /* Stack name and email */
+
+  .form-row {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+
+  .form-group {
+    margin-bottom: 25px;
+  }
+
+
+  .subject {
+    margin-top: 0;
+  }
+
+
+  /* Button */
+
+  button {
+    width: 100%;
+
+    padding: 13px;
+  }
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 350px) {
+
+  .contact-info {
+    padding: 30px 20px;
+  }
+
+  .contact-form {
+    padding: 30px 20px;
+  }
+
+  .contact-info h2 {
+    font-size: 17px;
+  }
+
+  .contact-item {
+    font-size: 11px;
+  }
+}
